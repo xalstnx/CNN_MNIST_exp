@@ -35,8 +35,11 @@
 ## 성능 향상을 위한 분석 및 결과 비교
 ### 1. epoch 비교
 가설 : 반복 학습 횟수(epoch)가 많아질수록 더 높은 정확도가 산출될 것이다.
+
 동일 조건 : batch normalization, learning rate(1e-3), keep probability(0.8)
+
 비교 조건 : 반복 학습 횟수(epoch)
+
 new_model => batch norm, lr=1e-3, keep=0.8, epoch=5		Accuracy = 0.8767762184143066
 
 new_model1 => batch norm, lr=1e-3, keep=0.8, epoch=15	Accuracy = 0.8892373442649841
@@ -62,8 +65,11 @@ new_model7 => batch norm, lr=1e-3, keep=0.8, epoch=110	Accuracy = 0.901642978191
 
 ### 2. keep probability 비교(=dropout)
 가설 : keep probability가 높을수록 더 높은 train Accuracy가 산출되지만, 너무 높을 경우 오버피팅이 발생하여 test Accuracy가 떨어질 수 있다.
+
 동일 조건 : batch normalization, learning rate(1e-3), epoch(15)
+
 비교 조건 : keep probability(keep)
+
 new_model11 => batch norm, lr=1e-3, keep=0.2, epoch=15	Accuracy = 0.711839497089386
 
 new_model10 => batch norm, lr=1e-3, keep=0.5, epoch=15	Accuracy = 0.8582371473312378
@@ -81,8 +87,11 @@ new_model12 => batch norm, lr=1e-3, keep=1.0, epoch=15	Accuracy = 0.888821065425
 
 ### 3. batch normalization 비교
 가설 : model에서 Conv2d와 Relu사이에 batch normalization을 하면 더 향상된 Accuracy가 나올 것이다.
+
 동일 조건 : learning rate(1e-3), keep probability(0.8), epoch(15)
+
 비교 조건 : batch normalization
+
 new_model1 => batch norm, lr=1e-3, keep=0.8, epoch=15	Accuracy = 0.8892373442649841
 
 new_model20 => no-batch norm, lr=1e-3, keep=0.8, epoch=15	Accuracy = 0.876526415348053
@@ -96,8 +105,11 @@ new_model20 => no-batch norm, lr=1e-3, keep=0.8, epoch=15	Accuracy = 0.876526415
 
 ### 4. learning rate 비교
 가설 : learning rate의 경우 값이 높거나 낮다고 좋은 것이 아닌 가장 적합한 값을 찾아야함.
+
 동일 조건 : batch normalization, keep probability(0.8), epoch(5)
+
 비교 조건 : learning rate
+
 new_model30 => batch norm, lr=1e-1, keep=0.8, epoch=5	Accuracy = 0.1730128824710846
 
 new_model31 => batch norm, lr=1e-2, keep=0.8, epoch=5	Accuracy = 0.7737289071083069
@@ -117,6 +129,7 @@ new_model34 => batch norm, lr=1e-5, keep=0.8, epoch=5	Accuracy = 0.3470248579978
 
 ### 5. best model
 다차례의 학습 결과, batch normalization을 사용하고, learning rate가 1e-3이고, keep probability가 0.8이고(dropout=0.2), epoch가 70인 모델이 가장 높은 test Accuracy를 산출함. 
+
 new_model5 => batch norm, lr=1e-3, keep=0.8, epoch=70	Accuracy = 0.9048068523406982
 
 ![image](https://user-images.githubusercontent.com/22045179/125044902-67438200-e0d7-11eb-959c-8ed27d576b5d.png)
