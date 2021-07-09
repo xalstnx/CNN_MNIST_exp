@@ -38,12 +38,19 @@
 동일 조건 : batch normalization, learning rate(1e-3), keep probability(0.8)
 비교 조건 : 반복 학습 횟수(epoch)
 new_model => batch norm, lr=1e-3, keep=0.8, epoch=5		Accuracy = 0.8767762184143066
+
 new_model1 => batch norm, lr=1e-3, keep=0.8, epoch=15	Accuracy = 0.8892373442649841
+
 new_model2 => batch norm, lr=1e-3, keep=0.8, epoch=20	Accuracy = 0.8909025192260742
+
 new_model3 => batch norm, lr=1e-3, keep=0.8, epoch=30	Accuracy = 0.8894871473312378
+
 new_model4 => batch norm, lr=1e-3, keep=0.8, epoch=50	Accuracy = 0.8935945630073547
+
 new_model5 => batch norm, lr=1e-3, keep=0.8, epoch=70	Accuracy = 0.9048068523406982
+
 new_model6 => batch norm, lr=1e-3, keep=0.8, epoch=90	Accuracy = 0.9036689400672913
+
 new_model7 => batch norm, lr=1e-3, keep=0.8, epoch=110	Accuracy = 0.9016429781913757
 
 ![image](https://user-images.githubusercontent.com/22045179/125044640-2186b980-e0d7-11eb-8de6-2f80287c19f9.png)
@@ -58,8 +65,11 @@ new_model7 => batch norm, lr=1e-3, keep=0.8, epoch=110	Accuracy = 0.901642978191
 동일 조건 : batch normalization, learning rate(1e-3), epoch(15)
 비교 조건 : keep probability(keep)
 new_model11 => batch norm, lr=1e-3, keep=0.2, epoch=15	Accuracy = 0.711839497089386
+
 new_model10 => batch norm, lr=1e-3, keep=0.5, epoch=15	Accuracy = 0.8582371473312378
+
 new_model1 => batch norm, lr=1e-3, keep=0.8, epoch=15	Accuracy = 0.8892373442649841
+
 new_model12 => batch norm, lr=1e-3, keep=1.0, epoch=15	Accuracy = 0.8888210654258728
 
 ![image](https://user-images.githubusercontent.com/22045179/125044709-32372f80-e0d7-11eb-9547-7b39f6e8a553.png)
@@ -74,6 +84,7 @@ new_model12 => batch norm, lr=1e-3, keep=1.0, epoch=15	Accuracy = 0.888821065425
 동일 조건 : learning rate(1e-3), keep probability(0.8), epoch(15)
 비교 조건 : batch normalization
 new_model1 => batch norm, lr=1e-3, keep=0.8, epoch=15	Accuracy = 0.8892373442649841
+
 new_model20 => no-batch norm, lr=1e-3, keep=0.8, epoch=15	Accuracy = 0.876526415348053
 
 ![image](https://user-images.githubusercontent.com/22045179/125044764-40854b80-e0d7-11eb-9965-3f887aea8fc9.png)
@@ -88,9 +99,13 @@ new_model20 => no-batch norm, lr=1e-3, keep=0.8, epoch=15	Accuracy = 0.876526415
 동일 조건 : batch normalization, keep probability(0.8), epoch(5)
 비교 조건 : learning rate
 new_model30 => batch norm, lr=1e-1, keep=0.8, epoch=5	Accuracy = 0.1730128824710846
+
 new_model31 => batch norm, lr=1e-2, keep=0.8, epoch=5	Accuracy = 0.7737289071083069
+
 new_model => batch norm, lr=1e-3, keep=0.8, epoch=5		Accuracy = 0.8767762184143066
+
 new_model33 => batch norm, lr=1e-4, keep=0.8, epoch=5	Accuracy = 0.7808059453964233
+
 new_model34 => batch norm, lr=1e-5, keep=0.8, epoch=5	Accuracy = 0.3470248579978943
 
 ![image](https://user-images.githubusercontent.com/22045179/125044807-4b3fe080-e0d7-11eb-9eff-a9bc714401dd.png)
